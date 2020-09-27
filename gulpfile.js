@@ -70,16 +70,18 @@ browserReload = () => {
   gulp.watch("app/js/*.js", script);
 };
 
-build = () => {
+build = (done) => {
   let buildHtml = gulp.src("app/**/*.html").pipe(gulp.dest("dist"));
 
-  let BuildCss = gulp.src("app/css/**/*.css").pipe(gulp.dest("dist/css"));
+  let buildCss = gulp.src("app/css/**/*.css").pipe(gulp.dest("dist/css"));
 
-  let BuildJs = gulp.src("app/js/**/*.js").pipe(gulp.dest("dist/js"));
+  let buildJs = gulp.src("app/js/**/*.js").pipe(gulp.dest("dist/js"));
 
-  let BuildImg = gulp.src("app/img/**/*.*").pipe(gulp.dest("dist/img"));
+  let buildImg = gulp.src("app/img/**/*.*").pipe(gulp.dest("dist/img"));
+
+  done();
 };
 
-// exports.buildDist = series("clean", build);
+exports.build = series("clean", build);
 
 exports.default = parallel(html, script, css, scss, js, browserReload);
