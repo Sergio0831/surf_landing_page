@@ -1,0 +1,173 @@
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  color: $light;
+  background: #171919;
+  text-transform: uppercase;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $light;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.textline-left {
+  position: relative;
+  display: inline-block;
+  padding-left: 103px;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 7.33333px;
+  opacity: 0.5;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 80px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+  }
+}
+
+.textline-right {
+  position: relative;
+  display: inline-block;
+  padding-right: 103px;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 7.33333px;
+  opacity: 0.5;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 80px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 86px;
+}
+
+.text {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.section-title {
+  span {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 200px;
+    position: relative;
+    color: rgba($light, 0.02);
+    transform: translateX(-50px);
+  }
+  h3 {
+    margin: 0;
+    top: 0;
+    right: 0;
+    font-size: 80px;
+    position: absolute;
+    color: $light;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      top: 0;
+      right: 0;
+      background: $green;
+    }
+  }
+}
+
+.section-subtitle {
+  display: inline-block;
+  .text {
+    // padding-right: 10px;
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
+.btn {
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 800;
+  span {
+    margin-left: 8px;
+    padding: 17px 57px 17px 17px;
+    background: $green;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background: $light;
+      top: 50%;
+      left: -8px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/right-arrow.svg);
+      width: 25px;
+      height: 21px;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.surf,
+.travel,
+.accommodation,
+.shop {
+  padding-top: 100px;
+}
+
+.slider-arrows {
+  transition: ease 0.3s;
+  opacity: 0.25;
+  &:hover {
+    opacity: 1 !important;
+    transform: scale(1.2) !important;
+  }
+}
