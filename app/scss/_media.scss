@@ -227,7 +227,7 @@
       top: 0;
     }
     .menu-btn {
-      right: 33px;
+      right: 94px;
     }
     &__aside {
       height: 100vh;
@@ -442,6 +442,17 @@
 
 @media (max-width: 768px) {
   .header {
+    .menu-btn {
+      right: 51px;
+    }
+    .slider-arrows {
+      &__right {
+        right: 40px;
+      }
+      &__left {
+        right: 80px;
+      }
+    }
     &__map {
       svg {
         width: 800px;
@@ -454,6 +465,14 @@
     }
   }
   .surf {
+    .slider-arrows {
+      &__right {
+        right: 40px;
+      }
+      &__left {
+        right: 80px;
+      }
+    }
     &__subtitle {
       padding-right: 40px;
     }
@@ -774,6 +793,14 @@
 }
 
 @media (max-width: 460px) {
+  .header {
+    &__map {
+      svg {
+        width: 400px;
+        height: 300px;
+      }
+    }
+  }
   .slider-item__heading {
     right: 30px;
     bottom: 30px;
@@ -929,6 +956,7 @@
       }
     }
     .slider-arrows {
+      top: 240px;
       right: 40px;
       &__left {
         right: 80px;
@@ -1013,6 +1041,7 @@
       }
     }
     .slider-arrows {
+      top: 240px;
       right: 40px;
       &__left {
         right: 80px;
@@ -1063,6 +1092,17 @@
 
 @media (max-width: 435px) {
   .header {
+    .menu-btn {
+      right: 32px;
+    }
+    .slider-arrows {
+      &__right {
+        right: 20px;
+      }
+      &__left {
+        right: 60px;
+      }
+    }
     .slider-item__heading {
       right: 20px;
       .title {
@@ -1081,14 +1121,22 @@
     &__subtitle {
       padding-right: 20px;
     }
+    .slider-arrows {
+      &__right {
+        right: 20px;
+      }
+      &__left {
+        right: 60px;
+      }
+    }
     .section-title {
       span {
-        font-size: 70px;
+        font-size: 80px;
       }
       h3 {
-        font-size: 40px;
+        font-size: 46px;
         &::after {
-          width: 50px;
+          width: 40px;
         }
       }
     }
@@ -1099,16 +1147,17 @@
         line-height: 45px;
       }
       .textline-left {
-        padding-left: 60px;
+        padding-left: 50px !important;
         &::before {
-          width: 50px;
+          width: 40px !important;
+          transform: translateY(-50%);
         }
       }
     }
 
     .slider-map {
       .slider-dots__content {
-        width: 150px;
+        width: 175px;
         padding: 15px 15px 0 15px;
         &-title {
           font-size: 14px;
@@ -1128,7 +1177,7 @@
       }
       .slick-current {
         .slider-dots__content {
-          width: 150px;
+          width: 175px;
           padding: 15px 15px 0 15px;
           &-title {
             font-size: 14px;
@@ -1173,8 +1222,148 @@
     }
   }
 
+  // Travel section
+  .travel {
+    .section-title {
+      span {
+        font-size: 80px;
+      }
+      h3 {
+        font-size: 46px;
+        &::after {
+          width: 40px;
+        }
+      }
+    }
+    &-slider__subtitle {
+      margin-top: 1px;
+      .text {
+        font-size: 30px;
+        line-height: 45px;
+      }
+      .textline-left {
+        padding-left: 50px !important;
+        &::before {
+          width: 40px !important;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .descr {
+      .textline-right {
+        padding-right: 50px;
+        &::before {
+          width: 40px;
+        }
+      }
+    }
+    .slider-arrows {
+      top: 30px;
+    }
+    .travel-slider__details {
+      &-subtitle {
+        font-size: 12px;
+      }
+      &-title {
+        font-size: 24px;
+        .summ {
+          margin-right: 0px;
+        }
+        .title-span {
+          font-size: 12px;
+        }
+      }
+      .title-span {
+        transform: translateX(-75px);
+      }
+    }
+  }
+
+  // Sleep section
+  .accommodation {
+    .slider-arrows {
+      top: 30px;
+    }
+    .section-title {
+      span {
+        font-size: 80px;
+      }
+      h3 {
+        font-size: 46px;
+        &::after {
+          width: 40px;
+        }
+      }
+    }
+    &-slider__subtitle {
+      margin-top: 1px;
+      .text {
+        font-size: 30px;
+        line-height: 45px;
+      }
+      .textline-left {
+        padding-left: 50px !important;
+        &::before {
+          width: 40px !important;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .descr {
+      .textline-right {
+        padding-right: 50px;
+        &::before {
+          width: 40px;
+        }
+      }
+    }
+    .accommodation-slider__details {
+      &-subtitle {
+        font-size: 12px;
+      }
+      &-title {
+        font-size: 24px;
+        .summ {
+          margin-right: 0px;
+        }
+        .title-span {
+          font-size: 12px;
+        }
+      }
+      .title-span {
+        transform: translateX(-75px);
+      }
+    }
+  }
+
   // Shop section
   .shop {
+    .section-title {
+      span {
+        font-size: 80px;
+      }
+      h3 {
+        font-size: 46px !important;
+        &::after {
+          width: 40px;
+        }
+      }
+    }
+    .shop__slider-info {
+      padding-top: 100px;
+    }
+    .descr {
+      .textline-right {
+        padding-right: 50px;
+        &::before {
+          width: 40px;
+        }
+      }
+      &__title {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
     .surfboard {
       .box-1 {
         .surfboard__box-content {
@@ -1186,52 +1375,8 @@
 }
 
 @media (max-width: 375px) {
-  .header {
-    &__map {
-      svg {
-        width: 400px;
-        height: 300px;
-      }
-    }
-    .menu-btn {
-      right: 20px;
-    }
-    .slider-item__heading {
-      right: 20px;
-      bottom: 150px;
-      .textline-left {
-        padding-left: 60px;
-        &::before {
-          width: 50px;
-        }
-      }
-      .title {
-        line-height: 60px;
-        font-size: 40px;
-      }
-      .text {
-        font-size: 30px;
-        line-height: 45px;
-      }
-    }
-  }
   // Surf section
   .surf {
-    background-size: 55px;
-    &__subtitle {
-      margin-top: 1px;
-    }
-    .section-title {
-      span {
-        font-size: 70px;
-      }
-      h3 {
-        font-size: 40px;
-        &::after {
-          width: 50px;
-        }
-      }
-    }
     .section-subtitle {
       .text {
         font-size: 30px;
@@ -1457,7 +1602,7 @@
   // Shop section
   .shop {
     .slider-arrows {
-      top: -20px;
+      top: 30px;
     }
   }
 }
