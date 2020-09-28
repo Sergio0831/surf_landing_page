@@ -4,6 +4,8 @@ const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const cache = require("gulp-cache");
 const del = require("del");
 const autoprefixer = require("gulp-autoprefixer");
 const { src, series, parallel, dest, watch } = require("gulp");
@@ -58,6 +60,20 @@ js = () => {
     .pipe(browserSync.reload({ stream: true }));
 };
 
+// Optimize Images
+imageMin = () => {
+  return src("app/img/**/*")
+    .pipe(
+      cache(
+        imagemin({
+          interlaced: true,
+        })
+      )
+    )
+    .pipe(gulp.dest("dist/img"))
+    .pipe(browserSync.reload({ stream: true }));
+};
+
 browserReload = () => {
   browserSync.init({
     server: {
@@ -84,4 +100,12 @@ build = (done) => {
 
 exports.build = series("clean", build);
 
-exports.default = parallel(html, script, css, scss, js, browserReload);
+exports.default = parallel(
+  html,
+  script,
+  css,
+  scss,
+  js,
+  imageMin,
+  browserReload
+);
