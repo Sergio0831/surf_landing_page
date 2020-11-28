@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
 module.exports = {
@@ -79,6 +80,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.[contenthash].css'
     }),
+    new CssMinimizerPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.hbs'
