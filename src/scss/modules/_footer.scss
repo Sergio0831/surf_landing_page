@@ -1,14 +1,3 @@
-@import "./config/fonts";
-@import "./config/variables";
-@import "./config/config";
-@import "./media";
-@import "./modules/header";
-@import "./modules/surf-section";
-@import "./modules/travel-section";
-@import "./modules/accommodation-section";
-@import "./modules/shop-section";
-
-// Footer
 .footer {
   padding: 282px 0 37px 0;
   text-align: center;
@@ -29,5 +18,3 @@
     opacity: 0.5;
   }
 }
-
-@import "media";

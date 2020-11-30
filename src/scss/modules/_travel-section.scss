@@ -1,0 +1,81 @@
+.travel {
+  background: bottom -88px right/ auto no-repeat url(../img/travel/cocktail.png);
+  &__slider {
+    .slider-arrows {
+      top: 230px;
+      opacity: 0.25;
+    }
+    &-item {
+      min-height: 780px;
+    }
+  }
+  &-slider {
+    &__head {
+      min-height: 780px;
+      position: relative;
+    }
+    &__subtitle {
+      padding: 132px 80px 0 0;
+      text-align: right;
+      .section-subtitle {
+        display: inline-block;
+      }
+    }
+    &__descr {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -100px;
+      .plane {
+        transform: rotate(10deg) translateY(-50%) translateX(3%);
+      }
+      .descr {
+        padding-left: 132px;
+        img {
+          padding-left: 26px;
+          display: inline-block;
+        }
+      }
+    }
+    &__details {
+      display: flex;
+      justify-content: space-around;
+      &-item {
+        min-height: 200px;
+        margin-bottom: 66px;
+        position: relative;
+        &:nth-child(2) {
+          white-space: nowrap;
+        }
+      }
+      &-subtitle {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 8px;
+        opacity: 0.5;
+        transform: rotate(-90deg) translate(-98%, 0);
+        white-space: nowrap;
+        text-align: right;
+        height: 0;
+        transform-origin: left top;
+      }
+      &-title {
+        font-size: 40px;
+        line-height: 36px;
+        font-weight: 800;
+        padding-left: 40px;
+        width: 242px;
+        span {
+          font-size: 14px;
+          line-height: 36px;
+          letter-spacing: 5.25px;
+          font-weight: 400;
+          opacity: 0.75;
+          float: right;
+        }
+      }
+    }
+    &__btn {
+      text-align: center;
+    }
+  }
+}
